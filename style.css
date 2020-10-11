@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.slider {
+    width: 1200px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    margin: 100px auto;
+    background: #000;
+}
+.slide {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 48px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s ease-in-out;
+}
+.red {
+    background: red;
+}
+.blue {
+    background: blue;
+}
+.green {
+    background: green;
+}
+.orange {
+    background: orange;
+}
+.violet {
+    background: violet;
+}
+.nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.prev {
+    left: 50px;
+    position: absolute;
+    cursor: pointer;
+}
+.next {
+    right: 50px;
+    position: absolute;
+    cursor: pointer;
+}
