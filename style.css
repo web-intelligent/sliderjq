@@ -3,19 +3,24 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    font-size: 14px;
+}
 .slider {
     width: 1200px;
     height: 500px;
     position: relative;
     overflow: hidden;
     margin: 100px auto;
-    background: #000;
+    /* background: #000; */
 }
 .slide {
     display: flex;
     justify-content: center;
     align-self: center;
     font-weight: bold;
+    flex-direction:column;
+    text-align: center;
     color: #fff;
     font-size: 48px;
     width: 100%;
@@ -24,6 +29,18 @@
     top: 0;
     left: 0;
     transition: 1s ease-in-out;
+}
+.slide img {
+    width: 100%;
+}
+.description {
+    position: absolute;
+    z-index:2;
+    background: rgba(0,0,0,0.8);
+    bottom: 0;
+}
+.description p {
+    font-size: 14px;
 }
 .red {
     background: red;
@@ -49,9 +66,85 @@
     left: 50px;
     position: absolute;
     cursor: pointer;
+    background: #fff;
+    box-shadow: 1px 1px 2px #000;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+.prev span {
+    width: 20px;
+    height: 2px;
+    background: #000;
+    position: absolute;    
+}
+
+.prev span::before {
+    content: "";
+    width: 10px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin-top: -4px;
+    left: 0;
+    transition: 0.2s ease-in-out;
+}
+.prev span::after {
+    content: "";
+    width: 10px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    transform: rotate(45deg);
+    margin-top: 4px;
+    left: 0;
+    transition: 0.2s ease-in-out;
+}
+
 .next {
     right: 50px;
     position: absolute;
     cursor: pointer;
+    background: #fff;
+    box-shadow: 1px 1px 2px #000;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.next span {
+    width: 20px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+}
+.next span::before {
+    content: "";
+    width: 10px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    transform: rotate(45deg);
+    margin-top: -4px;
+    right: 0;
+    transition: 0.2s ease-in-out;
+}
+.next span::after {
+    content: "";
+    width: 10px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin-top: 4px;
+    right: 0;
+    transition: 0.2s ease-in-out;
 }
